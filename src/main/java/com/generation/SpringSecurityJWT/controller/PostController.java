@@ -13,12 +13,14 @@ public class PostController {
 
     private final PostService postService;
 
+
+
     public PostController(PostService postService) {
         this.postService = postService;
     }
 
     @PostMapping
-    public Post post(@RequestBody Post post) {
+    public Post save(@RequestBody Post post) {
         return postService.save(post);
     }
 
